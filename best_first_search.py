@@ -105,8 +105,10 @@ def process_board(board, trans_dict=None, start_char=("A",1), goal_char=("B",1))
     finished = [[0]*size_x for y in range(size_y)]
 
     if trans_dict is None:
-        trans_dict = {'.':1, start_char[0]:start_char[1], goal_char[0]:goal_char[1], '#':float("inf")}
+        trans_dict = {'.':1, '#':float("inf"), "r":1, "g":5, "f":10, "m":50, "w":100}
 
+    trans_dict[start_char[0]]=start_char[1]
+    trans_dict[goal_char[0]]=goal_char[1]
     for j in range(size_y):
         for i in range(size_x):
             char = board[j][i]
@@ -184,19 +186,29 @@ def _task_a1_helper(board_path):
 
     print_board(mod_board)
 
-def _task_a2_helper(board_path)
+def _task_a2_helper(board_path):
+    string_board = file_to_stringlist(board_path)
+    (board, start, goal) = process_board(string_board)
+
+    cost, pre, seen = best_first_search(board, start, goal)
+
+    path = construct_predecessor_path(pre, goal)
+
+    mod_board = fill_squares(string_board, path, ".")
+
+    print_board(mod_board)
 
 def task_a1():
     path = "boards/board-1-%d.txt"
     for i in range(1, 5):
-        print(i)
+        print("\nBoard 1-"+str(i))
         _task_a1_helper(path % (i))
-
 
 def task_a2():
     path = "boards/board-2-%d.txt"
     for i in range(1, 5):
-        print(i)
+        print("\nBoard 2-"+str(i))
         _task_a2_helper(path % (i))
 
 task_a1()
+task_a2()
