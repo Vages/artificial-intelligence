@@ -28,6 +28,15 @@ def manhattan_distance(a, b):
 
     return x+y
 
+def dijkstra_heur(*args):
+    """Heuristic function for dijkstra
+
+    :param args: anything
+    :return: 0 in any case
+    """
+    return 0
+
+
 
 def best_first_search(map, start, goal, heur=manhattan_distance):
     """Does a best-first-search
