@@ -192,6 +192,10 @@ def print_board(board):
 
 def _task_a1_helper(board_path):
     string_board = file_to_stringlist(board_path)
+
+    print("Before:")
+    print_board(string_board)
+
     (board, start, goal) = process_board(string_board)
 
     cost, pre, seen = best_first_search(board, start, goal)
@@ -200,10 +204,15 @@ def _task_a1_helper(board_path):
 
     mod_board = fill_squares(string_board, path, "o")
 
+    print("\nAfter:")
     print_board(mod_board)
 
 def _task_a2_helper(board_path):
     string_board = file_to_stringlist(board_path)
+
+    print("Before:")
+    print_board(string_board)
+
     (board, start, goal) = process_board(string_board)
 
     cost, pre, seen = best_first_search(board, start, goal)
@@ -212,6 +221,7 @@ def _task_a2_helper(board_path):
 
     mod_board = fill_squares(string_board, path, ".")
 
+    print("\nAfter:")
     print_board(mod_board)
 
 def task_a1():
