@@ -3,7 +3,14 @@ __author__ = 'eirikvageskar'
 from heapq import heappush, heappop
 from copy import deepcopy
 
-# Note to self: the coordinate system of the map will be [y][x] indexed, with positive y-axis down
+"""It is important to take note of the coordinate system.
+
+First of all, the maps will consist of lists of lists. The x-axis will horizontal, directed to the right.
+The y-axis will be vertical, directed downward. Both are 0-indexed.
+
+Usually, the coordinates will be delivered in tuples of the form (x, y). When working with lists, it is therefore
+necessary to swap the two, so that addressing the coordinate (a, b) on map c is done in the following way:
+c[b][a]"""
 
 
 class BoardError(Exception):
