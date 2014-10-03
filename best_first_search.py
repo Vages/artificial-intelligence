@@ -2,6 +2,7 @@ __author__ = 'eirikvageskar'
 
 from heapq import heappush, heappop
 from copy import deepcopy
+from collections import deque
 
 """It is important to take note of the coordinate system.
 
@@ -22,7 +23,6 @@ class BoardError(Exception):
         return repr(self.value)
 
 
-
 def manhattan_distance(a, b):
     """Calculates the manhattan distance between two points (tuples).
 
@@ -35,6 +35,7 @@ def manhattan_distance(a, b):
 
     return x+y
 
+
 def dijkstra_heur(*args):
     """Heuristic function for dijkstra
 
@@ -44,22 +45,21 @@ def dijkstra_heur(*args):
     return 0
 
 
+def best_first_search(weight_map, start, goal, heur=manhattan_distance):
+    """Does a best-first-search on the map using a given map of weight, start and goal coordinates.
+    Uses manhattan distance as a standard heuristic function.
 
-def best_first_search(map, start, goal, heur=manhattan_distance):
-    """Does a best-first-search
-
-    :param goal:
-    :param map:
-    :param start:
-    :param heur:
+    :param goal: Goal coordinate (x, y).
+    :param weight_map: List of lists of weights.
+    :param start: Start coordinate (x, y).
+    :param heur: Heuristic function. Manhattan distance as standard.
     :return:
     """
 
 
-    cost = dict()   # Dictionary of costs for travelling to each node
-    cost[start] = 0     # Initial node is 0
+    cost = {start:0}
 
-    ''' Note: This algorithm takes advantage of the fact that the cost to each node is never relaxed if we always
+    '''Note: This algorithm takes advantage of the fact that the cost to each node is never relaxed if we always
     make sure to pop the node with the least cost from the queue. Therefore we have no need to propagate cost
     estimates
     '''
@@ -68,8 +68,8 @@ def best_first_search(map, start, goal, heur=manhattan_distance):
 
     offsets = ((-1, 0), (0, 1), (1, 0), (0, -1))    # The four
 
-    map_size_x = len(map[0])    # Horizontal map distance
-    map_size_y = len(map)       # Vertical map distance
+    map_size_x = len(weight_map[0])    # Horizontal weight_map distance
+    map_size_y = len(weight_map)       # Vertical weight_map distance
 
     pre = dict()    # Predecessor dicts
     pre[start] = None
@@ -87,26 +87,66 @@ def best_first_search(map, start, goal, heur=manhattan_distance):
         (a, b) = node
 
         for o in offsets:       # x coordinate
-            i,j = o
-            new_x,new_y = a+i, b+j
+            i, j = o
+            new_x, new_y = a+i, b+j
             new_node = (new_x, new_y)
 
             if (0 <= new_x < map_size_x) and (0 <= new_y < map_size_y) and (new_node not in pre):
-                #print("success")
-                #print(new_node)
-
-                if map[new_y][new_x] < inf:
+                if weight_map[new_y][new_x] < inf:
                     pre[new_node] = node
-                    new_node_cost = cost[node]+map[new_y][new_x]    # Note swapped coordinates
+                    new_node_cost = cost[node]+weight_map[new_y][new_x]    # Note swapped coordinates
                     cost[new_node] = new_node_cost
                     f = new_node_cost + heur(new_node, goal)
                     heappush(Q, (f, new_node))
-                    #print(Q)
 
     raise BoardError("No path from start to end")
 
 
-def process_board(board, trans_dict=None, start_char=("A",1), goal_char=("B",1)):
+def breadth_first_search(weight_map, start, goal):
+    Q = deque()
+    cost = {start:0}
+    inf = float("inf")
+
+    offsets = ((-1, 0), (0, 1), (1, 0), (0, -1))
+
+    map_size_x = len(weight_map[0])    # Horizontal weight_map distance
+    map_size_y = len(weight_map)       # Vertical weight_map distance
+
+    pre = dict()    # Predecessor dicts
+    pre[start] = None
+    seen = set()    # The nodes that have been evaluated
+
+    Q.append(start)
+
+    while Q:
+        node = Q.popleft()
+
+        if node in seen:
+            continue
+        seen.add(node)
+        if node == goal:
+            return cost, pre, seen
+
+        (a, b) = node
+
+        for o in offsets:
+            i, j = o
+            new_x, new_y = a+i, b+j
+            new_node = (new_x, new_y)
+
+            if (0 <= new_x < map_size_x) and (0 <= new_y < map_size_y) and (new_node not in pre):
+                if weight_map[new_y][new_x] < inf:
+                    pre[new_node] = node
+                    new_node_cost = cost[node]+weight_map[new_y][new_x]    # Note swapped coordinates
+                    cost[new_node] = new_node_cost
+                    Q.append(new_node)
+
+    raise BoardError("No path from start to end")
+
+
+
+
+def process_board(board, trans_dict=None, start_char=("A", 1), goal_char=("B", 1)):
     """Translates a board from a string representation to a list, as well as finding start and goal positions.
 
     :param board: The board in a list of strings format.
@@ -128,8 +168,10 @@ def process_board(board, trans_dict=None, start_char=("A",1), goal_char=("B",1))
     for j in range(size_y):
         for i in range(size_x):
             char = board[j][i]
-            if char == start_char[0]: start = (i, j)
-            if char == goal_char[0]: goal = (i, j)
+            if char == start_char[0]:
+                start = (i, j)
+            if char == goal_char[0]:
+                goal = (i, j)
             finished[j][i] = trans_dict[char]
 
     return finished, start, goal
@@ -150,6 +192,7 @@ def file_to_stringlist(filepath):
 
     return list_thing
 
+
 def construct_predecessor_path(pre_dict, end):
     """Gives the shortest path to the endpoint.
 
@@ -158,6 +201,7 @@ def construct_predecessor_path(pre_dict, end):
     :return: A list of tuples representing the squares visited.
     """
     a = [end]
+
     while True:
         temp = pre_dict[a[-1]]
         if temp is None:
@@ -169,26 +213,30 @@ def construct_predecessor_path(pre_dict, end):
 
     return a
 
-def fill_squares(map, list, fill_character="o"):
-    """Fills map squares given in list with the given fill character.
 
-    :param map: A map (list of list of characters)
-    :param list: Set of coordinates
+def fill_squares(char_map, coord_list, fill_character="o"):
+    """Fills char_map squares given in coord_list with the given fill character.
+
+    :param char_map: A char_map (coord_list of coord_list of characters)
+    :param coord_list: Set of coordinates
     :param fill_character: Any character
-    :return: The modified map
+    :return: The modified char_map
     """
-    map_copy = deepcopy(map)
+    map_copy = deepcopy(char_map)
 
-    for a, b in list:
+    for a, b in coord_list:
         map_copy[b][a] = fill_character
 
     return map_copy
+
 
 def print_board(board):
     for line in board:
         print("".join(line))
 
-"""The following are tests"""
+
+#The following are solutions for tasks
+
 
 def _task_a1_helper(board_path):
     string_board = file_to_stringlist(board_path)
@@ -207,6 +255,7 @@ def _task_a1_helper(board_path):
     print("\nAfter:")
     print_board(mod_board)
 
+
 def _task_a2_helper(board_path):
     string_board = file_to_stringlist(board_path)
 
@@ -224,11 +273,20 @@ def _task_a2_helper(board_path):
     print("\nAfter:")
     print_board(mod_board)
 
+
+def _task_a3_helper(board_path):
+    pass
+
+    #string_board = file_to_stringlist(board_path)
+
+
+
 def task_a1():
     path = "boards/board-1-%d.txt"
     for i in range(1, 5):
         print("\nBoard 1-"+str(i))
         _task_a1_helper(path % (i))
+
 
 def task_a2():
     path = "boards/board-2-%d.txt"
@@ -236,5 +294,8 @@ def task_a2():
         print("\nBoard 2-"+str(i))
         _task_a2_helper(path % (i))
 
+
+
 task_a1()
 task_a2()
+
