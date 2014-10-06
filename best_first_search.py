@@ -22,7 +22,6 @@ class BoardError(Exception):
     def __str__(self):
         return repr(self.value)
 
-
 def manhattan_distance(a, b):
     """Calculates the manhattan distance between two points (tuples).
 
@@ -235,6 +234,15 @@ def print_board(board):
         print("".join(line))
 
 
+def visualize_search_costs_and_path(char_board, pre, seen, goal):
+    path = construct_predecessor_path(pre, goal)
+    char_board = fill_squares(char_board, pre, "O")
+    char_board = fill_squares(char_board, seen, "∃")
+    char_board = fill_squares(char_board, path, "x")
+
+    return char_board
+
+
 #The following are solutions for tasks
 
 
@@ -275,11 +283,30 @@ def _task_a2_helper(board_path):
 
 
 def _task_a3_helper(board_path):
-    pass
+    string_board = file_to_stringlist(board_path)
 
-    #string_board = file_to_stringlist(board_path)
+    print("Before:")
+    print_board(string_board)
 
+    (board, start, goal) = process_board(string_board)
 
+    best_solution = best_first_search(board, start, goal)
+    dijkstra_solution = best_first_search(board, start, goal, heur=dijkstra_heur)
+    breadth_solution = breadth_first_search(board, start, goal)
+
+    best_visualization = visualize_search_costs_and_path(string_board, best_solution[1], best_solution[2], goal)
+    dijkstra_visualization = visualize_search_costs_and_path(string_board, dijkstra_solution[1], dijkstra_solution[2], goal)
+    breadth_visualization = visualize_search_costs_and_path(string_board, breadth_solution[1], breadth_solution[2], goal)
+
+    print("\nBest-first search:")
+    print_board(best_visualization)
+    print("Cost:", best_solution[0][goal])
+    print("\nDijkstra search:")
+    print_board(dijkstra_visualization)
+    print("Cost:", dijkstra_solution[0][goal])
+    print("\nBreadth-first search:")
+    print_board(breadth_visualization)
+    print("Cost:", breadth_solution[0][goal])
 
 def task_a1():
     path = "boards/board-1-%d.txt"
@@ -294,8 +321,15 @@ def task_a2():
         print("\nBoard 2-"+str(i))
         _task_a2_helper(path % (i))
 
+def task_a3():
+    path = "boards/board-%d-%d.txt"
+    for i in range(1, 3):
+        for j in range(1, 5):
+            print("\nBoard "+str(i)+"-"+str(j))
+            _task_a3_helper(path % (i, j))
+
 
 
 task_a1()
 task_a2()
-
+task_a3()

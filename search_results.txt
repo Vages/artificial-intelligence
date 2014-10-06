@@ -1,0 +1,567 @@
+TASK A1
+
+Board 1-1
+Before:
+....................
+....................
+.........######.....
+...........A..#..B..
+.........######.....
+....................
+....................
+
+After:
+....................
+........oooooooo....
+........o######o....
+........oooo..#ooo..
+.........######.....
+....................
+....................
+
+Board 1-2
+Before:
+.......#............
+.....#.#............
+....#..#............
+A..#..#............B
+....#..#....#.......
+.....#..#..#........
+......#...#.........
+
+After:
+....ooo#............
+...oo#o#............
+..oo#oo#............
+ooo#.o#..ooooooooooo
+....#oo#.o..#.......
+.....#oo#o.#........
+......#ooo#.........
+
+Board 1-3
+Before:
+....................
+..........#.........
+.......##..#........
+......#.A#.#........
+......#.#..#........
+......#...#.........
+.......###.........B
+
+After:
+.........ooo........
+.........o#oo.......
+.......##oo#o.......
+......#oo#o#o.......
+......#o#oo#o.......
+......#ooo#.o.......
+.......###..oooooooo
+
+Board 1-4
+Before:
+A.#.......#......#..
+#.#.#####.#.####.#..
+..#.....#.#....#....
+.##.###.######.#####
+..#.B#..#....#...#..
+#.####.##.##.#.#.##.
+...........#...#....
+
+After:
+oo#.......#......#..
+#o#.#####.#.####.#..
+oo#ooooo#.#....#....
+o##o###o######.#####
+oo#oo#oo#....#...#..
+#o####o##.##.#.#.##.
+.oooooo....#...#....
+
+TASK A2
+
+Board 2-1
+Before:
+mmmmmffffrrrrrrrrArrrrrrrrrrrrrrfffmmmmm
+mmmffffffffrrrrrrrrrrrrrrrrrrrrfffffmmmm
+mmfffffffffffffffffffffffffffrffffffmmmm
+mmfffffffffffffwwwwwfffffffffrfffffffmmm
+mfffffffffffffwwwwwwwffffffffrffffffmmmm
+mmffffffffffffwwwwwwwffrrrrrrrrrrrrrmmmm
+mmmffffffffffffwwwwwffffffffffffrffffmmm
+mmffffffffffffffffffffffffffffffrfffffmm
+mmffffffffggggggggggggggggggggggggffffmm
+mmmffffggggggggggBggggggggggggggggggffmm
+
+After:
+mmmmmffffrrrrrrrr.rrrrrrrrrrrrrrfffmmmmm
+mmmffffffffrrrrrr.............rfffffmmmm
+mmfffffffffffffffffffffffffff.ffffffmmmm
+mmfffffffffffffwwwwwfffffffff.fffffffmmm
+mfffffffffffffwwwwwwwffffffff.ffffffmmmm
+mmffffffffffffwwwwwwwff.......rrrrrrmmmm
+mmmffffffffffffwwwwwfff.ffffffffrffffmmm
+mmfffffffffffffffffffff.ffffffffrfffffmm
+mmffffffffggggggg.......ggggggggggffffmm
+mmmffffgggggggggg.ggggggggggggggggggffmm
+
+Board 2-2
+Before:
+ffffffffffgggrgggggggrggggfffffffrrfffff
+ffAffffffgggrrggggggrrggffffffffrrffffff
+ffffffgggggrrggggggrrgggffffrrrrrfffffff
+gggggggggggrggggrrrrgggffffrrfffffffffff
+gggggrrrrrrrrrrrrgggggffffrrffffffffffff
+ggggrrgggggrggggggggffffffrfffffffffffff
+gggrrggggggrrggggggffffrrrrrrfffffffffff
+ggrrgggffgggrrrrggffrrrrfrffrrrrrfffffff
+ggrggffffffffffrrrrrrffffrffffffrrffffff
+ggrgfffffffffffffffffffffrffBffffrrfffff
+
+After:
+ffffffffffgggrgggggggrggggfffffffrrfffff
+ff.ffffffgggrrggggggrrggffffffffrrffffff
+ff.fffgggggrrggggggrrgggffffrrrrrfffffff
+gg.ggggggggrggggrrrrgggffffrrfffffffffff
+gg..........rrrrrgggggffffrrffffffffffff
+ggggrrggggg.ggggggggffffffrfffffffffffff
+gggrrgggggg..ggggggffff......fffffffffff
+ggrrgggffggg....ggff....frff.rrrrfffffff
+ggrggffffffffff......ffffrff.fffrrffffff
+ggrgfffffffffffffffffffffrff.ffffrrfffff
+
+Board 2-3
+Before:
+gggggggggwwwgggggmmmmmmmmmmBrrrrrrrmmmmm
+gggggggggwwwwggggmmmmmmmmmmmmmmmmmrmgggg
+ggggggggggwwwwggggmmmmmmmmmmmmmmggrggggg
+ffgggggggggwwwwggggmmmmmmmmmggggggrrgggg
+ffggggggggggwwwwwwwwwwwwwggggggggggrrrrr
+ffffggggggggggwwwwwwwwwwwwwggggggggggggg
+ffffffgggggggggggggggggwwwwwwggggggmmmmm
+fAfffffffffgggggggggmmmmmmwwwwmmmmmmmmmm
+fffffffffffffffmmmmmmmmmmmmmwwwmmmmmmmmm
+ffffffffffmmmmmmmmmmmmmmmmmmwwwmmmmmmmmm
+
+After:
+gggggggggwwwgggggmmmmmmmmmm........mmmmm
+gggggggggwwwwggggmmmmmmmmmmmmmmmmm.mgggg
+ggggggggggwwwwggggmmmmmmmmmmmmmmgg.ggggg
+ffgggggggggwwwwggggmmm....mm.......rgggg
+ffggggggggggwwwwwwwwww.ww....ggggggrrrrr
+ffffggggggggggwwwwwwww.wwwwggggggggggggg
+f......................wwwwwwggggggmmmmm
+f.fffffffffgggggggggmmmmmmwwwwmmmmmmmmmm
+fffffffffffffffmmmmmmmmmmmmmwwwmmmmmmmmm
+ffffffffffmmmmmmmmmmmmmmmmmmwwwmmmmmmmmm
+
+Board 2-4
+Before:
+wwwwwggggggggggggggggggggggggggggggrrrrr
+wwwwwwwgggggggggggggggggggggwwwwwgrrgggg
+wwwwwwwwwwwgggAgggggggwwwwwwwwwwwwrwgggg
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwrwwwww
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwrwwwww
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwrrwwwww
+wwwwwwwwgggggBgggggwwwwwwwwwwwwwwrwwwwww
+wwwwggggggffffffgggggggggwwwwwwwwrwwwwww
+wwggggffffffffffffffggggggggggggrrgwwwww
+wgggfffrrrrrrrrrrrrrrrrrrrrrrrrrrggggggg
+
+After:
+wwwwwggggggggg....................grrrrr
+wwwwwwwggggggg.gggggggggggggwwwww..rgggg
+wwwwwwwwwwwggg.gggggggwwwwwwwwwwww.wgggg
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww.wwwww
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww.wwwww
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww..wwwww
+wwwwwwwwggggg.gggggwwwwwwwwwwwwww.wwwwww
+wwwwggggggfff.ffgggggggggwwwwwwww.wwwwww
+wwggggfffffff.ffffffgggggggggggg..gwwwww
+wgggfffrrrrrr....................ggggggg
+
+TASK A3
+
+Board 1-1
+Before:
+....................
+....................
+.........######.....
+...........A..#..B..
+.........######.....
+....................
+....................
+
+Best-first search:
+........OOOOOOOOOO..
+.......Oxxxxxxxx∃∃O.
+......O∃x######x∃∃O.
+.....O∃∃xxxx∃∃#xxx..
+......O∃∃######OO...
+.......O∃∃∃∃∃∃∃∃∃O..
+........OOOOOOOOO...
+Cost: 16
+
+Dijkstra search:
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃O.
+∃∃∃∃∃∃∃∃xxxxxxxx∃∃∃O
+∃∃∃∃∃∃∃∃x######x∃∃O.
+∃∃∃∃∃∃∃∃xxxx∃∃#xxx..
+∃∃∃∃∃∃∃∃∃######∃∃∃O.
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃O
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃O.
+Cost: 16
+
+Breadth-first search:
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃O.
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃O
+∃∃∃∃∃∃∃∃∃######∃∃∃O.
+∃∃∃∃∃∃∃∃xxxx∃∃#∃∃xO.
+∃∃∃∃∃∃∃∃x######∃∃x∃O
+∃∃∃∃∃∃∃∃xxxxxxxxxx∃∃
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃O
+Cost: 16
+
+# They find the same path, but Best-first has a much smaller set of opened and closed nodes than the other two.
+
+Board 1-2
+Before:
+.......#............
+.....#.#............
+....#..#............
+A..#..#............B
+....#..#....#.......
+.....#..#..#........
+......#...#.........
+
+Best-first search:
+∃∃∃∃xxx#............
+∃∃∃xx#x#............
+∃∃xx#xx#.OOOOOOOOOO.
+xxx#∃x#.Oxxxxxxxxxxx
+∃∃∃∃#xx#Ox∃∃#OOOOOO.
+∃∃∃∃∃#xx#x∃#........
+∃∃∃∃∃∃#xxx#.........
+Cost: 33
+
+Dijkstra search:
+xxxxxxx#∃∃∃∃∃∃∃∃∃O..
+x∃∃∃∃#x#∃∃∃∃∃∃∃∃∃∃O.
+x∃∃∃#xx#∃∃∃∃∃∃∃∃∃∃∃O
+x∃∃#∃x#∃∃xxxxxxxxxxx
+∃∃∃∃#xx#∃x∃∃#∃∃∃∃∃∃O
+∃∃∃∃∃#xx#x∃#∃∃∃∃∃∃O.
+∃∃∃∃∃∃#xxx#∃∃∃∃∃∃O..
+Cost: 33
+
+Breadth-first search:
+∃∃∃∃xxx#∃∃∃∃∃∃∃∃O...
+∃∃∃xx#x#∃∃∃∃∃∃∃∃∃O..
+∃∃xx#xx#∃∃∃∃∃∃∃∃∃∃O.
+xxx#∃x#∃∃∃∃xxxxxxxxx
+∃∃∃∃#xx#∃∃xx#∃∃∃∃∃∃O
+∃∃∃∃∃#xx#xx#∃∃∃∃∃∃O.
+∃∃∃∃∃∃#xxx#∃∃∃∃∃∃O..
+Cost: 33
+
+# Same as previous.
+
+Board 1-3
+Before:
+....................
+..........#.........
+.......##..#........
+......#.A#.#........
+......#.#..#........
+......#...#.........
+.......###.........B
+
+Best-first search:
+........Oxxx∃∃∃∃∃∃∃∃
+.......O∃x#xx∃∃∃∃∃∃∃
+.......##xx#x∃∃∃∃∃∃∃
+......#xx#x#x∃∃∃∃∃∃∃
+......#x#xx#x∃∃∃∃∃∃∃
+......#xxx#Ox∃∃∃∃∃∃∃
+.......###.Oxxxxxxxx
+Cost: 28
+
+Dijkstra search:
+∃∃∃∃∃∃∃∃∃xxx∃∃∃∃∃∃∃∃
+∃∃∃∃∃∃∃∃∃x#xx∃∃∃∃∃∃∃
+∃∃∃∃∃∃∃##xx#x∃∃∃∃∃∃∃
+∃∃∃∃∃∃#xx#x#x∃∃∃∃∃∃∃
+∃∃∃∃∃∃#x#xx#x∃∃∃∃∃∃∃
+∃∃∃∃∃∃#xxx#∃x∃∃∃∃∃∃∃
+∃∃∃∃∃∃∃###∃∃xxxxxxxx
+Cost: 28
+
+Breadth-first search:
+∃∃∃∃∃∃∃∃∃xxx∃∃∃∃∃∃∃∃
+∃∃∃∃∃∃∃∃∃x#xx∃∃∃∃∃∃∃
+∃∃∃∃∃∃∃##xx#x∃∃∃∃∃∃∃
+∃∃∃∃∃∃#xx#x#x∃∃∃∃∃∃∃
+∃∃∃∃∃∃#x#xx#x∃∃∃∃∃∃∃
+∃∃∃∃∃∃#xxx#∃x∃∃∃∃∃∃∃
+∃∃∃∃∃∃∃###∃∃xxxxxxxx
+Cost: 28
+
+# Same as previous.
+
+Board 1-4
+Before:
+A.#.......#......#..
+#.#.#####.#.####.#..
+..#.....#.#....#....
+.##.###.######.#####
+..#.B#..#....#...#..
+#.####.##.##.#.#.##.
+...........#...#....
+
+Best-first search:
+xx#.......#......#..
+#x#O#####.#.####.#..
+xx#xxxxx#.#....#....
+x##x###x######.#####
+xx#xx#xx#∃O..#...#..
+#x####x##∃##.#.#.##.
+∃xxxxxx∃∃∃O#...#....
+Cost: 26
+
+Dijkstra search:
+xx#∃∃O....#......#..
+#x#∃#####.#.####.#..
+xx#xxxxx#.#....#....
+x##x###x######.#####
+xx#xx#xx#∃∃∃∃#...#..
+#x####x##∃##∃#.#.##.
+∃xxxxxx∃∃∃∃#∃∃O#....
+Cost: 26
+
+Breadth-first search:
+xx#∃O.....#......#..
+#x#∃#####.#.####.#..
+xx#xxxxx#.#....#....
+x##x###x######.#####
+xx#xx#xx#∃∃∃∃#...#..
+#x####x##∃##∃#O#.##.
+∃xxxxxx∃∃∃∃#∃∃∃#....
+Cost: 26
+
+# Same as previous.
+
+Board 2-1
+Before:
+mmmmmffffrrrrrrrrArrrrrrrrrrrrrrfffmmmmm
+mmmffffffffrrrrrrrrrrrrrrrrrrrrfffffmmmm
+mmfffffffffffffffffffffffffffrffffffmmmm
+mmfffffffffffffwwwwwfffffffffrfffffffmmm
+mfffffffffffffwwwwwwwffffffffrffffffmmmm
+mmffffffffffffwwwwwwwffrrrrrrrrrrrrrmmmm
+mmmffffffffffffwwwwwffffffffffffrffffmmm
+mmffffffffffffffffffffffffffffffrfffffmm
+mmffffffffggggggggggggggggggggggggffffmm
+mmmffffggggggggggBggggggggggggggggggffmm
+
+Best-first search:
+mmmmO∃∃∃∃∃∃∃∃∃∃∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Ommmm
+mmmfO∃∃∃∃∃∃∃∃∃∃∃∃xxxxxxxxxxxxx∃∃∃∃OOmmmm
+mmfffO∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃x∃∃∃∃∃∃Ommm
+mmffffO∃∃∃∃∃∃∃∃OOOOO∃∃∃∃∃∃∃∃∃x∃∃∃∃∃∃∃Omm
+mffffffO∃∃∃∃∃∃OwwwwwO∃∃∃∃∃∃∃∃x∃∃∃∃∃∃Ommm
+mmffffffO∃∃∃∃∃OwwwwwO∃∃xxxxxxx∃∃∃∃∃∃Ommm
+mmmfffffO∃∃∃∃∃∃OwwwO∃∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃Omm
+mmfffffffOO∃∃∃OffOOO∃∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃Omm
+mmffffffffO∃∃∃∃OOxxxxxxx∃∃∃∃∃∃∃∃∃∃∃∃Ofmm
+mmmffffggggOO∃OggxO∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Omm
+Cost: 79
+
+Dijkstra search:
+mmmOO∃∃∃∃∃∃∃∃∃∃∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Ommmm
+mmO∃∃∃∃∃∃∃∃∃∃∃∃∃∃xxxxxxxxxxxxx∃∃∃∃∃∃Ommm
+mmfO∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃x∃∃∃∃∃∃Ommm
+mmffO∃∃∃∃∃∃∃∃∃∃OOOOO∃∃∃∃∃∃∃∃∃x∃∃∃∃∃∃∃Omm
+mffffO∃∃∃∃∃∃∃∃OwwwwwO∃∃∃∃∃∃∃∃x∃∃∃∃∃∃Ommm
+mmffffO∃∃∃∃∃∃∃OwwwwwO∃∃xxxxxxx∃∃∃∃∃∃∃Omm
+mmmffffO∃∃∃∃∃∃∃OwwwO∃∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃Omm
+mmffffffO∃∃∃∃∃∃OfOO∃∃∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃Om
+mmfffffffO∃∃∃∃∃OOxxxxxxx∃∃∃∃∃∃∃∃∃∃∃∃∃∃Om
+mmmffffgggO∃∃∃Oggx∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Om
+Cost: 79
+
+Breadth-first search:
+mmmmmffO∃∃∃∃∃∃∃∃∃x∃∃∃∃∃∃∃∃Orrrrrfffmmmmm
+mmmfffffO∃∃∃∃∃∃∃∃x∃∃∃∃∃∃∃Orrrrrfffffmmmm
+mmfffffffO∃∃∃∃∃∃∃x∃∃∃∃∃∃Offffrffffffmmmm
+mmffffffffO∃∃∃∃∃∃x∃∃∃∃∃Offfffrfffffffmmm
+mffffffffffO∃∃∃∃∃x∃∃∃∃Offffffrffffffmmmm
+mmffffffffffO∃∃∃∃x∃∃∃Ofrrrrrrrrrrrrrmmmm
+mmmffffffffffO∃∃∃x∃∃Offfffffffffrffffmmm
+mmffffffffffffO∃∃x∃Offffffffffffrfffffmm
+mmffffffffgggggO∃xOgggggggggggggggffffmm
+mmmffffgggggggggOxggggggggggggggggggffmm
+Cost: 427
+
+# Dijkstra and Best-first find paths of same cost, but Best-first opens and closes fewer nodes.
+# Breadth first finds a dramatically more expensive path.
+
+Board 2-2
+Before:
+ffffffffffgggrgggggggrggggfffffffrrfffff
+ffAffffffgggrrggggggrrggffffffffrrffffff
+ffffffgggggrrggggggrrgggffffrrrrrfffffff
+gggggggggggrggggrrrrgggffffrrfffffffffff
+gggggrrrrrrrrrrrrgggggffffrrffffffffffff
+ggggrrgggggrggggggggffffffrfffffffffffff
+gggrrggggggrrggggggffffrrrrrrfffffffffff
+ggrrgggffgggrrrrggffrrrrfrffrrrrrfffffff
+ggrggffffffffffrrrrrrffffrffffffrrffffff
+ggrgfffffffffffffffffffffrffBffffrrfffff
+
+Best-first search:
+∃∃∃∃∃∃OfffgO∃∃∃OgggO∃∃∃Oggfffffffrrfffff
+∃∃x∃∃∃∃OOOO∃∃∃∃OOOO∃∃∃∃OffffOfffrrffffff
+∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OfffO∃Orrrfffffff
+∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OfffO∃∃Offffffffff
+∃∃xxxxxxxxxx∃∃∃∃∃∃∃∃∃OfffO∃∃Offfffffffff
+∃∃∃∃∃∃∃∃∃∃∃x∃∃∃∃∃∃∃∃OOOOOO∃OOfffffffffff
+∃∃∃∃∃∃∃∃∃∃∃xx∃∃∃∃∃OO∃∃∃xxxxxxOOOOfffffff
+∃∃∃∃∃∃∃OO∃∃∃xxxx∃∃∃∃xxxx∃∃∃∃x∃∃∃∃Offffff
+∃∃∃∃∃OOffOO∃∃∃∃xxxxxx∃∃∃O∃∃OxOOO∃Offffff
+∃∃∃∃∃OfffffOOOO∃∃∃∃∃∃OOOO∃∃OxfffOrrfffff
+Cost: 72
+
+Dijkstra search:
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OfffffO∃Offfff
+∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OfOOOOO∃∃Offfff
+∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OfO∃∃∃∃∃∃Offffff
+∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OO∃∃∃OOOOfffffff
+∃∃xxxxxxxxxx∃∃∃∃∃∃∃∃∃∃∃OO∃∃∃∃Offffffffff
+∃∃∃∃∃∃∃∃∃∃∃x∃∃∃∃∃∃∃∃∃∃O∃∃∃∃∃∃Offffffffff
+∃∃∃∃∃∃∃∃∃∃∃xx∃∃∃∃∃∃∃∃∃∃xxxxxx∃OOOfffffff
+∃∃∃∃∃∃∃∃∃∃∃∃xxxx∃∃∃∃xxxx∃∃∃∃x∃∃∃∃Offffff
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃xxxxxx∃∃∃∃∃∃OxOOO∃∃Offfff
+∃∃∃∃∃∃∃OO∃∃∃∃∃∃∃∃∃∃∃∃∃OO∃∃∃OxfffO∃∃Offff
+Cost: 72
+
+Breadth-first search:
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Offff
+∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Offf
+∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Offff
+∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Offfff
+∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Offffff
+∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Offfffff
+∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Offffffff
+∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Orrfffffff
+∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Offrrffffff
+∃∃xxxxxxxxxxxxxxxxxxxxxxxxxxxffffrrfffff
+Cost: 270
+
+# The same as the last board.
+
+Board 2-3
+Before:
+gggggggggwwwgggggmmmmmmmmmmBrrrrrrrmmmmm
+gggggggggwwwwggggmmmmmmmmmmmmmmmmmrmgggg
+ggggggggggwwwwggggmmmmmmmmmmmmmmggrggggg
+ffgggggggggwwwwggggmmmmmmmmmggggggrrgggg
+ffggggggggggwwwwwwwwwwwwwggggggggggrrrrr
+ffffggggggggggwwwwwwwwwwwwwggggggggggggg
+ffffffgggggggggggggggggwwwwwwggggggmmmmm
+fAfffffffffgggggggggmmmmmmwwwwmmmmmmmmmm
+fffffffffffffffmmmmmmmmmmmmmwwwmmmmmmmmm
+ffffffffffmmmmmmmmmmmmmmmmmmwwwmmmmmmmmm
+
+Best-first search:
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OmmxxxxxxxxOmmmm
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OmmOOOOOOxOgggg
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OmOOOO∃OxOgggg
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃xxxx∃OxxxxxxxOgggg
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃x∃∃xxxx∃∃∃∃∃Orrrrr
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃x∃∃∃O∃∃∃∃∃∃∃Oggggg
+∃xxxxxxxxxxxxxxxxxxxxxx∃∃∃∃OO∃∃∃∃Ogmmmmm
+∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OOOOOmmmmmmm
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Owmmmmmmmmm
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Owwmmmmmmmmm
+Cost: 596
+
+Dijkstra search:
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OmmxxxxxxxxOmmmm
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OmmOOOOOOxOgggg
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OmOOOO∃∃x∃OOOO
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Oxxxxxxx∃∃∃∃∃
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃xxxxxxx∃∃∃∃∃∃∃∃∃∃∃
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃x∃∃∃O∃∃∃∃∃∃∃∃∃∃∃∃∃
+∃xxxxxxxxxxxxxxxxxxxxxx∃∃∃∃OO∃∃∃∃∃∃OOOOO
+∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃OOOOOOOmmmmm
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Owmmmmmmmmm
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Owwmmmmmmmmm
+Cost: 596
+
+Breadth-first search:
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃xOrrrrrrmmmmm
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃x∃Ommmmrmgggg
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃x∃∃Omggrggggg
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃x∃∃∃Oggrrgggg
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃x∃∃∃∃Oggrrrrr
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃x∃∃∃∃∃Ogggggg
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃x∃∃∃∃∃∃Ommmmm
+∃xxxxxxxxxxxxxxxxxxxxxxxxxxx∃∃∃∃∃∃∃Ommmm
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Ommmmm
+∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃Ommmmmm
+Cost: 896
+
+# Once again, Dijkstra's and Best-first find paths of the same cost.
+# Breadth-first is extremely expensive. Best first has considerably fewer opened and closed nodes.
+
+Board 2-4
+Before:
+wwwwwggggggggggggggggggggggggggggggrrrrr
+wwwwwwwgggggggggggggggggggggwwwwwgrrgggg
+wwwwwwwwwwwgggAgggggggwwwwwwwwwwwwrwgggg
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwrwwwww
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwrwwwww
+wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwrrwwwww
+wwwwwwwwgggggBgggggwwwwwwwwwwwwwwrwwwwww
+wwwwggggggffffffgggggggggwwwwwwwwrwwwwww
+wwggggffffffffffffffggggggggggggrrgwwwww
+wgggfffrrrrrrrrrrrrrrrrrrrrrrrrrrggggggg
+
+Best-first search:
+wwwwO∃∃∃∃∃∃∃∃∃xxxxxxxxxxxxxxxxxxxx∃∃∃∃∃∃
+wwwwwO∃∃∃∃∃∃∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃OOOOOxx∃∃∃∃∃
+wwwwwwO∃∃∃∃∃∃∃x∃∃∃∃∃∃∃∃OOOOOwwwwwOxO∃∃∃∃
+wwwwwwwOOOO∃∃∃∃∃∃∃∃∃∃∃OwwwwwwwwwwOxOOOOO
+wwwwwwwwwwwOOOOOOOOOOOwwwwwwwwwwwOxOwwww
+wwwwwwwwwwwwwwwwOOOwwwwwwwwwwwwwOxxOwwww
+wwwwwwwwgggggxgO∃∃∃OOOOOOwwwwwwwOxOwwwww
+wwwwgggggOOOOxOO∃∃∃∃∃∃∃∃∃OOOOOOOOxOwwwww
+wwggggfOO∃∃∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃xx∃Owwww
+wgggffO∃∃∃∃∃∃xxxxxxxxxxxxxxxxxxxx∃∃∃Oggg
+Cost: 161
+
+Dijkstra search:
+wwwO∃∃∃∃∃∃∃∃∃∃xxxxxxxxxxxxxxxxxxxx∃∃∃∃∃∃
+wwwwO∃∃∃∃∃∃∃∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃OOOOOxx∃∃∃∃∃
+wwwwwOO∃∃∃∃∃∃∃x∃∃∃∃∃∃∃∃∃∃∃OOwwwwwOxO∃∃∃∃
+wwwwwwwOOOO∃∃∃∃∃∃∃∃∃∃∃OOOOwwwwwwwOxOOOOO
+wwwwwwwwwwwOOOOOOOOOOOwwwwwwwwwwwOxOwwww
+wwwwwwwwwwwwwwwwOOOwwwwwwwwwwwwwOxxOwwww
+wwwwwwwOOOggOxOO∃∃∃OOOOOOwwwwwwwOxOwwwww
+wwwwggO∃∃∃OO∃x∃∃∃∃∃∃∃∃∃∃∃OOOOOOOOxOwwwww
+wwggggO∃∃∃∃∃∃x∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃∃xx∃OOOOO
+wgggfO∃∃∃∃∃∃∃xxxxxxxxxxxxxxxxxxxx∃∃∃∃∃∃∃
+Cost: 161
+
+Breadth-first search:
+wwwwwgggggO∃∃∃∃∃∃Ogggggggggggggggggrrrrr
+wwwwwwwggO∃∃∃∃∃∃∃∃Ogggggggggwwwwwgrrgggg
+wwwwwwwwO∃∃∃∃xx∃∃∃∃Oggwwwwwwwwwwwwrwgggg
+wwwwwwwwwO∃∃∃x∃∃∃∃Owwwwwwwwwwwwwwwrwwwww
+wwwwwwwwwwO∃∃x∃∃∃Owwwwwwwwwwwwwwwwrwwwww
+wwwwwwwwwwwO∃x∃∃Owwwwwwwwwwwwwwwwrrwwwww
+wwwwwwwwggggOx∃Ogggwwwwwwwwwwwwwwrwwwwww
+wwwwggggggffffOfgggggggggwwwwwwwwrwwwwww
+wwggggffffffffffffffggggggggggggrrgwwwww
+wgggfffrrrrrrrrrrrrrrrrrrrrrrrrrrggggggg
+Cost: 306
+
+# Best first opens the fewest nodes, but is ekstremely expensive. Dijkstra and best first opens and closes about the same amount of nodes.
