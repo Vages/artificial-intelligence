@@ -27,8 +27,7 @@ def get_random_position(array, value):
     if value not in array:
         raise ValueError(value, "Value not in array")
     else:
-        height = len(array)
-        width = len(array[0])
+        width, height = array_dimensions(array)
         while True:
             y = randrange(height)
             x = randrange(width)
